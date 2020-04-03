@@ -15,7 +15,7 @@ app.use(express.static("static"));
 // bardzo ważne gdy używamy ejs
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb+srv://admin_Kari_Fra:admin1234@cluster0-4ckte.mongodb.net/todolistDB", {
+mongoose.connect(process.env.URL, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
